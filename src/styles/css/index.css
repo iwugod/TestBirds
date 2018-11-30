@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: transparent;
+  font-family: "Roboto-Regular"; }
+
+/*# sourceMappingURL=index.css.map */

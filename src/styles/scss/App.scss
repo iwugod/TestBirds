@@ -1,0 +1,261 @@
+@import "./mixins";
+$mainFontFamily: 'Roboto-Regular';
+$grey-color: #b2b2b2;
+$secondary-green:#233d39;
+$primary-green:#007672;
+$tertiary-green-hover:#e2f4ea;
+$orange-color: #ff9931;
+$color-white:#ffffff;
+$color-white-secondary:#eee;
+$color-white-tetiary:#9f9f9f;
+$error-color:#4a5f5c;
+
+.row {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+
+    @include respond-to(mobile) {
+        //border:1px solid #000;
+    }
+}
+
+textarea,
+input {
+    border-style: none;
+    -webkit-appearance: none;
+}
+
+.btn {
+    background-color: $color-white;
+    border: none;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.underline {
+    border-bottom: 1px solid $orange-color;
+}
+
+.icon-member {
+    padding: 0 10px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: $color-white-tetiary;
+    font-size: 24px;
+
+    &:hover {
+        background: $tertiary-green-hover;
+    }
+}
+
+.icon-group {
+    display: block;
+    padding:5px 10px;
+  }
+  .icon-group.green {
+    background: $tertiary-green-hover;
+  }
+
+.content {
+    border: 1px solid $color-white-secondary;
+    border-top: 4px solid $primary-green;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 320px;
+    padding: 15px;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .header-title {
+            color: $color-white-tetiary;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 16px;
+        }
+    }
+
+    .toggle-btn {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-decoration: none;
+        color: $primary-green;
+        cursor: pointer;
+
+        .AddTeam-button-1 {
+            width: 38px;
+            height: 38px;
+        }
+
+        .MuiButton-fab-19 {
+            height: 35px;
+            width: 35px;
+        }
+
+        .btn-text {
+            word-wrap: break-word;
+            max-width: 150px;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: $mainFontFamily;
+            line-height: 16px;
+        }
+
+        &:hover {
+            background-color: $tertiary-green-hover;
+        }
+    }
+
+    .dropdown-wrap {
+        position: relative;
+        z-index: 1;
+    }
+
+    .list-wrap {
+        position: absolute;
+        top: 10%;
+        border: 1px solid $color-white-secondary;
+
+        .search-box {
+            width: 95%;
+            font-size: 16px;
+            padding: 0 8px;
+            height: 48px;
+            position: relative;
+            z-index: 2;
+
+            &:focus {
+                border-bottom: 1px solid $primary-green;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                outline: none;
+            }
+        }
+
+        .icon-clear {
+            position: absolute;
+            right: 3%;
+            top: 20px;
+            font-size: 8px;
+            color: $orange-color;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .list-result {
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+        }
+    }
+
+    .list-items {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50px;
+
+        .item-users {
+            padding-left: 10px;
+        }
+
+        .item-user {
+            .item-role {
+                font-weight: bold;
+                color: $secondary-green;
+            }
+
+            .item-name {
+                position: relative;
+                color: $secondary-green;
+            }
+        }
+    }
+
+    .list-select {
+        @extend .list-items;
+
+        .icon-star {
+            color: $orange-color;
+            font-size: 8px;
+            position: absolute;
+            top: 2px;
+        }
+
+        .icon-member {
+            margin: 0 10px;
+            padding: 0;
+        }
+
+        .del-wrap {
+            border-radius: 50%;
+            border: 1px solid $color-white;
+
+            .del-item {
+                color: $orange-color;
+                text-align: center;
+                display: none;
+                padding: 0;
+            }
+
+            &:hover {
+                border: 1px solid $orange-color;
+            }
+        }
+
+        &:hover {
+            background-color: $tertiary-green-hover;
+            padding: 0 10px;
+
+            .item-user {
+                margin: 0 10px;
+            }
+
+            .del-item {
+                display: block;
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                color: $color-white-tetiary;
+                font-size: 24px;
+            }
+
+            .icon-member {
+                display: none;
+            }
+        }
+    }
+
+    .error-msg {
+        text-align: center;
+        margin: 12px 0;
+
+        .err-title {
+            color: $primary-green;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .err-body {
+            font-size: 10px;
+            color: $error-color;
+        }
+    }
+
+    .err-exist {
+        font-size: 10px;
+        color: $error-color;
+        text-align: center;
+    }
+}

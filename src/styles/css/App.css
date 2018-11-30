@@ -1,0 +1,171 @@
+.row {
+  box-sizing: border-box;
+  display: block;
+  width: 100%; }
+
+textarea,
+input {
+  border-style: none;
+  -webkit-appearance: none; }
+
+.btn {
+  background-color: #ffffff;
+  border: none; }
+
+p {
+  padding: 0;
+  margin: 0; }
+
+.underline {
+  border-bottom: 1px solid #ff9931; }
+
+.icon-member {
+  padding: 0 10px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #9f9f9f;
+  font-size: 24px; }
+  .icon-member:hover {
+    background: #e2f4ea; }
+
+.icon-group {
+  display: block;
+  padding: 5px 10px; }
+
+.icon-group.green {
+  background: #e2f4ea; }
+
+.content {
+  border: 1px solid #eee;
+  border-top: 4px solid #007672;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  width: 320px;
+  padding: 15px; }
+  .content .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; }
+    .content .header .header-title {
+      color: #9f9f9f;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 16px; }
+  .content .toggle-btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    color: #007672;
+    cursor: pointer; }
+    .content .toggle-btn .AddTeam-button-1 {
+      width: 38px;
+      height: 38px; }
+    .content .toggle-btn .MuiButton-fab-19 {
+      height: 35px;
+      width: 35px; }
+    .content .toggle-btn .btn-text {
+      word-wrap: break-word;
+      max-width: 150px;
+      font-weight: bold;
+      font-size: 16px;
+      font-family: "Roboto-Regular";
+      line-height: 16px; }
+    .content .toggle-btn:hover {
+      background-color: #e2f4ea; }
+  .content .dropdown-wrap {
+    position: relative;
+    z-index: 1; }
+  .content .list-wrap {
+    position: absolute;
+    top: 10%;
+    border: 1px solid #eee; }
+    .content .list-wrap .search-box {
+      width: 95%;
+      font-size: 16px;
+      padding: 0 8px;
+      height: 48px;
+      position: relative;
+      z-index: 2; }
+      .content .list-wrap .search-box:focus {
+        border-bottom: 1px solid #007672;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        outline: none; }
+    .content .list-wrap .icon-clear {
+      position: absolute;
+      right: 3%;
+      top: 20px;
+      font-size: 8px;
+      color: #ff9931;
+      cursor: pointer;
+      z-index: 3; }
+    .content .list-wrap .list-result {
+      display: block;
+      box-sizing: border-box;
+      width: 100%; }
+  .content .list-items, .content .list-select {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px; }
+    .content .list-items .item-users, .content .list-select .item-users {
+      padding-left: 10px; }
+    .content .list-items .item-user .item-role, .content .list-select .item-user .item-role {
+      font-weight: bold;
+      color: #233d39; }
+    .content .list-items .item-user .item-name, .content .list-select .item-user .item-name {
+      position: relative;
+      color: #233d39; }
+  .content .list-select .icon-star {
+    color: #ff9931;
+    font-size: 8px;
+    position: absolute;
+    top: 2px; }
+  .content .list-select .icon-member {
+    margin: 0 10px;
+    padding: 0; }
+  .content .list-select .del-wrap {
+    border-radius: 50%;
+    border: 1px solid #ffffff; }
+    .content .list-select .del-wrap .del-item {
+      color: #ff9931;
+      text-align: center;
+      display: none;
+      padding: 0; }
+    .content .list-select .del-wrap:hover {
+      border: 1px solid #ff9931; }
+  .content .list-select:hover {
+    background-color: #e2f4ea;
+    padding: 0 10px; }
+    .content .list-select:hover .item-user {
+      margin: 0 10px; }
+    .content .list-select:hover .del-item {
+      display: block;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      color: #9f9f9f;
+      font-size: 24px; }
+    .content .list-select:hover .icon-member {
+      display: none; }
+  .content .error-msg {
+    text-align: center;
+    margin: 12px 0; }
+    .content .error-msg .err-title {
+      color: #007672;
+      font-size: 16px;
+      font-weight: bold; }
+    .content .error-msg .err-body {
+      font-size: 10px;
+      color: #4a5f5c; }
+  .content .err-exist {
+    font-size: 10px;
+    color: #4a5f5c;
+    text-align: center; }
+
+/*# sourceMappingURL=App.css.map */

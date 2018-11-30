@@ -1,0 +1,50 @@
+// responsive example, needs to be edited
+$break-small: 767px;
+$break-large: 768px;
+$break-large-right: 1270px;
+$break-large-right2: 999px;
+$break-huge: 1920px;
+$break-height:900px;
+$break-polytech: 940px;
+
+
+@mixin respond-min($min-width){
+    @media only screen and (min-width: $min-width) { @content; }
+  }
+  
+  @mixin respond-to($media) {
+      @if $media == mobile {
+          @media only screen and (max-width: $break-small) { @content; }
+      }
+      @if $media == mobile-portrait {
+        @media only screen and (max-width: $break-small) and (orientation:portrait) { @content; }
+      }
+      @if $media == mobile-landscape {
+        @media only screen and (max-width: $break-small) and (orientation:landscape) { @content; }
+      }
+      @else if $media == tablet {
+          @media only screen and (min-width: $break-large) and (max-width: $break-large-right) { @content; }
+      }
+      @else if $media == tablet-portrait {
+          @media only screen and (min-width: $break-large) and (max-width: $break-large-right2) and (orientation:portrait) { @content; }
+      }
+      @else if $media == tablet-landscape {
+        @media only screen and (min-width: $break-large) and (max-width: $break-large-right) and (orientation:landscape) { @content; }
+      }
+      @else if $media == desc {
+          @media only screen and (min-width: $break-large-right + 1) { @content; }
+      }
+      @else if $media == wide-screen {
+        @media only screen and (min-width: $break-huge + 1) { @content; }
+      }
+      @else if $media == print {
+          @media print { @content; }
+      }
+      @else if $media == laptop{
+        @media only screen and (min-width: $break-large-right2) and (max-height: $break-height) { @content; }
+      }
+      @else if $media == poly-menu-inline{
+        @media only screen and (min-width: $break-small) and (max-width: $break-polytech) { @content; }
+      }
+  
+  }

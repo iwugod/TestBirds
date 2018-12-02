@@ -36,7 +36,12 @@ let getLocalStorage='';
 
 class AddTeamMate extends React.Component {
     allItems = dummyData.map(s => ({id: s.id, username: s.username, role:s.role, picture:s.picture}))
-
+	
+	 constructor(props){
+        super(props);
+        this.deleteTeamMember = this.deleteTeamMember.bind(this);
+    }
+	
     state = {
         items: this.allItems,
         isOpen: '',
@@ -194,6 +199,15 @@ class AddTeamMate extends React.Component {
             return id;
         }
     };
+	
+	 deleteTeamMember = (id) =>{
+        if(id !=  null){
+            this.state.selectedTeam.splice(id,1);
+            this.setState({
+                selectedTeam:this.state.selectedTeam
+            })
+        }
+    };
   
     render() {
         const headerTitle = "YOUR TEAM FOR THIS TEST";
@@ -282,11 +296,14 @@ class AddTeamMate extends React.Component {
 
             </div>
             
-            {/* added team list */}
+             {/* added team list */}
             { this.state.selectedTeam.length > 0 
                 && 
-                <ListItem list={this.state.selectedTeam}/>
+                this.state.selectedTeam.map((data, index) => (
+                    <ListItem key={data.id} index={index} id={data.id} picture={data.picture} username={data.username} role={data.role}  deleteMember={this.deleteTeamMember}/>
+                )) 
             }
+			
             {/* error tab */}
             { this.state.error && this.state.errorMessage}
 
